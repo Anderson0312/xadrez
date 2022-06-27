@@ -43,15 +43,15 @@ public class JXadrez extends JFrame {
         pnLateral.setLayout(new GridLayout(10, 1));
 
 
-        btReiniciarJogo = new JButton("Reiniciar Jogo");
-        pnLateral.add(btReiniciarJogo);
+        // btReiniciarJogo = new JButton("Reiniciar Jogo");
+        // pnLateral.add(btReiniciarJogo);
 
-        btReiniciarJogo.addActionListener(new ActionListener() { 
-            public void actionPerformed(ActionEvent ev) {
-                reiniciaJogo();
-            }
-        });
-        this.add(pnLateral, BorderLayout.WEST);
+        // btReiniciarJogo.addActionListener(new ActionListener() { 
+        //     public void actionPerformed(ActionEvent ev) {
+        //         reiniciaJogo();
+        //     }
+        // });
+        // this.add(pnLateral, BorderLayout.WEST);
 
         //painelCemiterio.setLayout(new FlowLayout());
         this.add(painelCemiterio, BorderLayout.SOUTH);
