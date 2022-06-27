@@ -17,14 +17,21 @@ public class Peao extends Peca {
 
     @Override
     public boolean validaMovimento(int linhaDestino, int colunaDestino) { // Valida o movimento da (PEÇA) È obrigado ter esse metodo na classe, pois é fixo da (PEÇA)      
+        int dv = linhaDestino - getLinha();
+        int dh = colunaDestino - getColuna(); 
         Peca pecaDestino = getTabuleiro().getPeca(linhaDestino, colunaDestino);
-        if (pecaDestino == null && colunaDestino != getColuna()) {
+        if (pecaDestino == null && colunaDestino != getColuna()){
             return false; //não pode mover para os lados
+        }   
+        if (((getLinha() - linhaDestino) != 1) && (dh != 0)) {
+            return false;
         }
         return true;
+
     }
 
     public void setPrimeiroMovimento(boolean primeiroMovimento) {
+        
         this.primeiroMovimento = primeiroMovimento;
     }
 

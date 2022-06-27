@@ -14,8 +14,12 @@ public class Cavalo extends Peca {
 
     @Override
     public boolean validaMovimento(int linhaDestino, int colunaDestino) {
-        
-        return true;
+        int dv = linhaDestino - getLinha();
+        int dh = colunaDestino - getColuna();
+        if ((dv == 2 && dh == -1 ) || (dv == 2 && dh == 1) || (dv == -2 && dh == -1) || (dv == -2 && dh == 1)){
+            return true;
+        }
+        return false;
     }
     
 }

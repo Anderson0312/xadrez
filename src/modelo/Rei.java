@@ -13,7 +13,12 @@ public class Rei extends Peca {
 
     @Override
     public boolean validaMovimento(int linhaDestino, int colunaDestino) {
-        return true;
+        int dv = linhaDestino - getLinha();
+        int dh = colunaDestino - getColuna(); 
+        if ((dv >= 0 && dv <=1 ) && (dh >= 0 && dh <=1)) {
+            return true;
+        }
+        return false;
     }
     
 }

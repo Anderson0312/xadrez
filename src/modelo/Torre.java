@@ -13,8 +13,12 @@ public class Torre extends Peca {
 
     @Override
     public boolean validaMovimento(int linhaDestino, int colunaDestino) {
-        
-        return true;
+        int dv = linhaDestino - getLinha();
+        int dh = colunaDestino - getColuna();
+        if ( dv == 0 || dh == 0 ) {
+            return true;
+        }
+        return false;
     }
     
 }
