@@ -72,7 +72,6 @@ public class JXadrez extends JFrame {
         this.jTabuleiro.setTabuleiro(this.tabuleiro);
         this.jTabuleiro.desenhaTabuleiro();
         setVez(tabuleiro.getVez());
-        
     }
 
     public static void setVez(EnumCor corVez) {

@@ -3,7 +3,7 @@ package modelo;
 public class Bispo extends Peca {
 
     public Bispo (EnumCor cor, int linha, int coluna) {
-        super(cor, linha, coluna, "C:/Users/AndersoNMN/OneDrive/Documentos/GitHub/xadrez/src/figs/BISPO"+cor+".png");
+        super(cor, linha, coluna, "C:/Users/47127512021.1/Documents/GitHub/xadrez/src/figs/BISPO"+cor+".png");
     }
 
     public Bispo(EnumCor cor, int linha, int coluna, String image) {
@@ -13,8 +13,8 @@ public class Bispo extends Peca {
 
     @Override
     public boolean validaMovimento(int linhaDestino, int colunaDestino) {
-        int dv = linhaDestino - getLinha();
-        int dh = colunaDestino - getColuna();
+        int dv = Math.abs(linhaDestino - getLinha());
+        int dh = Math.abs(colunaDestino - getColuna());
         if (dv == dh || dh == dv) {
             return true;
         }
